@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Dashboard">
+
+    <include layout="@layout/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_dashboard"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingStart="@dimen/ten"
+        android:paddingEnd="@dimen/ten"
+        android:paddingBottom="@dimen/twenty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_dashboard"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/sixty_five_guideline_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/ninety_five_guideline_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fifteen_guideline_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <RadioGroup
+        android:id="@+id/radio_grp_dashboard"
+        android:checkedButton="@+id/list_view_btn_custom_switch"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/thirty"
+        android:background="@drawable/radio_btn_non_selected"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/sixty_five_guideline_dashboard"
+        app:layout_constraintEnd_toEndOf="@+id/ninety_five_guideline_dashboard"
+        app:layout_constraintTop_toTopOf="@+id/fifteen_guideline_dashboard">
+
+        <RadioButton
+            android:id="@+id/list_view_btn_custom_switch"
+            android:background="@drawable/radio_btn_selected"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/list"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/one"
+            android:layout_marginBottom="@dimen/one"
+            android:layout_marginStart="@dimen/one"/>
+
+        <RadioButton
+            android:id="@+id/grid_view_btn_custom_switch"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radio_btn_selected"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/grid"
+            android:textColor="@color/white"
+            android:layout_marginEnd="@dimen/one"
+            android:layout_marginTop="@dimen/one"
+            android:layout_marginBottom="@dimen/one"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/error_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:drawableTopCompat="@drawable/error_icon"
+        android:text="@string/no_net_str"
+        android:textSize="@dimen/sixteen_sp"
+        android:textColor="@color/primary_txt_clr"
+        android:drawablePadding="@dimen/ten"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingStart="@dimen/twenty"
+        android:paddingEnd="@dimen/twenty"
+        android:textAlignment="center"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/no_data_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:drawableTopCompat="@drawable/no_data_icon"
+        android:text="@string/no_data_available"
+        android:textSize="@dimen/sixteen_sp"
+        android:textColor="@color/primary_txt_clr"
+        android:drawablePadding="@dimen/ten"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/edit_fab_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:src="@drawable/pencil_icon"
+        app:backgroundTint="@color/white"
+        app:tint="@color/icons_clr"
+        app:elevation="@dimen/five"
+        android:contentDescription="@string/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="@dimen/thirty"
+        android:layout_marginBottom="@dimen/thirty" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/primary_txt_clr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/profile_layout_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

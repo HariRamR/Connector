@@ -1,0 +1,8 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/two" />
+    <solid android:color="@color/unselected_radio_bg_clr" />
+    <stroke
+        android:width="@dimen/one"
+        android:color="@color/pink" />
+</shape>

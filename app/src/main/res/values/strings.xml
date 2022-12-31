@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">connector</string>
+    <string name="contacts">Contacts</string>
+    <string name="add">Add</string>
+    <string name="account_info">Account Info</string>
+    <string name="back_to_home">Back to \n Home</string>
+    <string name="name">Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="dob">D.O.B</string>
+    <string name="address_static">Avenue 2nd Street NW SY.</string>
+    <string name="email_static">developer@appsnipp.com</string>
+    <string name="mobile_no_static">+91–8129999999</string>
+    <string name="name_static">developer</string>
+    <string name="something_went_wrong_try_again_later">Something went wrong. Try again later</string>
+    <string name="no_data_available">No data available</string>
+    <string name="grid">Grid</string>
+    <string name="list">List</string>
+    <string name="no_net_str">Enable internet connection and restart app to continue</string>
+</resources>

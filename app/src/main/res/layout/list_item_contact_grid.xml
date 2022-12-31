@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/twenty"
+    android:layout_marginStart="@dimen/ten"
+    android:layout_marginEnd="@dimen/ten">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/user_photo_list_item_contact"
+        android:layout_width="@dimen/seventy"
+        android:layout_height="@dimen/seventy"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+        app:strokeColor="@color/user_photo_border_clr"
+        app:strokeWidth="@dimen/two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/status_icon_list_item_contact"
+        android:layout_width="@dimen/ten"
+        android:layout_height="@dimen/ten"
+        android:background="@drawable/status_bg"
+        app:layout_constraintEnd_toEndOf="@+id/user_photo_list_item_contact"
+        app:layout_constraintBottom_toBottomOf="@+id/user_photo_list_item_contact"
+        android:layout_marginEnd="@dimen/ten"/>
+
+    <TextView
+        android:id="@+id/user_name_list_item_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sixteen_sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/user_photo_list_item_contact"
+        app:layout_constraintStart_toStartOf="@+id/user_photo_list_item_contact"
+        app:layout_constraintEnd_toEndOf="@+id/user_photo_list_item_contact"
+        android:layout_marginTop="@dimen/ten"
+        android:text="Hari Ram R"/>
+
+    <TextView
+        android:id="@+id/status_msg_list_item_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/twelve_sp"
+        android:textColor="@color/primary_txt_clr"
+        app:layout_constraintTop_toBottomOf="@+id/user_name_list_item_contact"
+        app:layout_constraintStart_toStartOf="@+id/user_photo_list_item_contact"
+        app:layout_constraintEnd_toEndOf="@+id/user_photo_list_item_contact"
+        android:paddingTop="@dimen/five"
+        android:text="What I'm doing here?"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
